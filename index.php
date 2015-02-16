@@ -7,6 +7,11 @@
 	$PASSWORD = "e7cf4c84041df584cf69a2560edfeeda9889c225039ee514797bf0b8ef45c070"; /* sha256($password); */
 	$WEBSITE  = "https://daknob.net/";	/* Website for redirects */
 
+	if($_SERVER['HTTPS'] != 'on'){
+		header("Location: https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+		exit();
+	}
+
 	if(isset($_POST['action']) && $_POST['action'] == "action"){		/* Check if the form is submitted */
 		$saveTo = "../STORAGE/" . $_FILES['filename']['name'];			/* Generate the path the file's supposed to be saved in */
 		if(hash("sha256", $_POST['pass']) == $PASSWORD){				/* Check if the password is correct */
