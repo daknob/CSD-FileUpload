@@ -4,7 +4,7 @@
 
 	/* Copyright (c) 2015 Antonios A. Chariton <daknob@tolabaki.gr> */
 
-	$PASSWORD = "e7cf4c84041df584cf69a2560edfeeda9889c225039ee514797bf0b8ef45c070"; /* sha256($password); */
+	$PASSWORD = "No SHA-256 will match this phrase"; /* sha256($password); */
 	$WEBSITE  = "https://daknob.net/";	/* Website for redirects */
 
 	if($_SERVER['HTTPS'] != 'on'){

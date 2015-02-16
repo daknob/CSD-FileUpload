@@ -30,3 +30,16 @@ Now edit the ```index.php``` script inside the ```FileUpload``` folder
 and change the ```$PASSWORD``` variable to the SHA-256 hash of your
 desired password. You may optionally also edit the ```$WEBSITE```
 variable to redirect bad requests to this website.
+
+Please note that in order to login to the service you need to
+have set a password. Learn how to do this below.
+
+<h2>Password Generation</h2>
+In order to generate a password for the file uploading, run the following
+command in a CSD Computer:
+```
+printf "PASSWORD_GOES_HERE" | sha256sum 
+```
+After that, you can copy the password and replace the contents of the
+```$PASSWORD``` variable with the output of this script. You will not be
+able to login without performing this step.
