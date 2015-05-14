@@ -29,7 +29,6 @@ chmod 755 tmp
 <br>
 
 
-
 Now edit the ```index.php``` script inside the ```~/public_html/FileUpload``` folder
 and change the ```$PASSWORD``` variable to the SHA-256 hash of your
 desired password. For more instructions on how to generate this, please
@@ -48,3 +47,25 @@ printf "PASSWORD_GOES_HERE" | sha256sum | cut -d" " -f1
 After that, you can copy the password and replace the contents of the
 ```$PASSWORD``` variable with the output of this script. Only include 
 the first You will not be able to login without performing this step.
+
+<h2>Uploading Files</h2>
+In order to upload files, after following the §Installation instructions, simply
+navigate with any browser to `https://www.csd.uoc.gr/~YourUserName/FileUpload` and
+then select a file from your computer to upload. After that, enter your password,
+and then press `Enter` or `Return`. If you entered the correct password and the
+upload succeeded, you will find the file in `~/public_html/STORAGE`. 
+
+<h3>Uploading multiple files</h3>
+In order to upload multiple files, the current solution is to create a `.zip`
+archive with all the files inside. Make sure it is `.zip` and not `.rar`.
+After that, locate the file using `ssh` to a computer and run:
+```
+unzip file_name
+```
+to extract all its contents in the current folder.
+
+<h3>Uploading a directory</h3>
+Due to browser limitations, selecting an entire directory to upload is not
+possible without using cutting edge features or breaking compatibility with
+all browsers. Therefore, you are encouraged to follow the instructions in the
+§Uploading multiple files section.
