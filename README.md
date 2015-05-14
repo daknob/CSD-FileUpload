@@ -48,6 +48,11 @@ After that, you can copy the password and replace the contents of the
 ```$PASSWORD``` variable with the output of this script. Only include 
 the first You will not be able to login without performing this step.
 
+<h4>Password Reset - iForgot</h4>
+In the unfortunate event of losing your password, please follow the
+instructions at §Password Generation in order to reset it. Currently
+you will not be asked about your first pet's name or a recovery e-mail.
+
 <h2>Uploading Files</h2>
 In order to upload files, after following the §Installation instructions, simply
 navigate with any browser to `https://www.csd.uoc.gr/~YourUserName/FileUpload` and
