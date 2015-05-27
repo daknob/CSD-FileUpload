@@ -4,13 +4,19 @@
 
 	/* Copyright (c) 2015 Antonios A. Chariton <daknob@tolabaki.gr> */
 
-	$PASSWORD = "No SHA-256 will match this phrase"; /* sha256($password); */
-	$WEBSITE  = "https://daknob.net/";	/* Website for redirects */
+	$WEBSITE  = "/~" + get_current_user() + "/";	/* Website for redirects */
 
 	if($_SERVER['HTTPS'] != 'on'){
 		header("Location: https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 		exit();
 	}
+
+	if(!file_exists("password.txt")) {
+		print("<h1>Please put a password in password.txt</h1>");
+		exit();
+	}
+
+	$PASSWORD = file_get_contents("password.txt");
 
 	if(isset($_POST['action']) && $_POST['action'] == "action"){		/* Check if the form is submitted */
 		$saveTo = "../STORAGE/" . $_FILES['filename']['name'];			/* Generate the path the file's supposed to be saved in */
