@@ -10,8 +10,7 @@ file hosting and are not accessible publicly.
 Login to a Debian computer as usual and then run:
 ```
 cd public_html
-git clone https://github.com/DaKnOb/CSD-FileUpload.git
-mv CSD-FileUpload FileUpload
+git clone https://github.com/DaKnOb/CSD-FileUpload.git FileUpload
 ```
 <br>
 Now test if all you can access the web application at:
@@ -42,7 +41,7 @@ have set a password. Learn how to do this below.
 In order to generate a password for the file uploading, run the following
 command in a CSD Computer:
 ```
-printf "PASSWORD_GOES_HERE" | sha256sum | cut -d" " -f1
+printf "PASSWORD_GOES_HERE" | sha256sum | cut -d" " -f1 > password.txt
 ```
 After that, you can copy the password and replace the contents of the
 ```$PASSWORD``` variable with the output of this script. Only include 
