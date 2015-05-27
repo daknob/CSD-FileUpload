@@ -16,7 +16,11 @@
 		exit();
 	}
 
-	$PASSWORD = file_get_contents("password.txt");
+	$PASSWORD = file_get_contents("password.txt", FALSE, NULL, 0, 64);
+	if($PASSWORD === FALSE) {
+		print("Something went wrong with the password...");
+		exit()
+	}
 
 	if(isset($_POST['action']) && $_POST['action'] == "action"){		/* Check if the form is submitted */
 		$saveTo = "../STORAGE/" . $_FILES['filename']['name'];			/* Generate the path the file's supposed to be saved in */
