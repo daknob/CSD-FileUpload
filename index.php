@@ -29,7 +29,10 @@
 				$saveTo = $saveTo . ".n";
 			}
 			if(move_uploaded_file($_FILES['filename']['tmp_name'], $saveTo)){	/* Try to 'upload' the file */
-				print("<h1 class='suc'>File upload completed.</h1>");	/* File uploaded successfully */ 
+				print("<h1 class='suc'>File upload completed.</h1>");	/* File uploaded successfully */
+
+				mail(get_current_user() . "@csd.uoc.gr", "File upload successful!", "You have successfully uploaded the file " . array_pop(explode("/", $saveTo)) . " using FileUpload.", "From: File Upload<fileupload@csd.uoc.gr>");
+
 			}else{
 				print("<h1>An error occured while uploading the file.</h1>");
 			}
