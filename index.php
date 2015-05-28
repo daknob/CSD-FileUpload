@@ -2,7 +2,7 @@
 
 	/* For license information please read the LICENSE file */
 
-	/* Copyright (c) 2015 Antonios A. Chariton <daknob@tolabaki.gr> */
+	/* Copyright (c) 2015 Antonios A. Chariton <daknob.mac@gmail.com> */
 
 	$PASSWORD = "No SHA-256 will match this phrase"; /* sha256($password); */
 	$WEBSITE  = "https://daknob.net/";	/* Website for redirects */
@@ -116,7 +116,7 @@
   		    	<input type="submit" value="Upload" name="submit" id="submit"> 
 			</form>
 			<br>
-			<center><span style="text-align:center; margin-left:auto;margin-right:auto;font: 12px Helvetica; color:#666;">Copyright &copy; 2015 - Antonios A. Chariton &lt;daknob@tolabaki.gr&gt;</span></center>
+			<center><span style="text-align:center; margin-left:auto;margin-right:auto;font: 12px Helvetica; color:#666;">Copyright &copy; 2015 - Antonios A. Chariton &lt;daknob.mac@gmail.com&gt;</span></center>
 		</div>
 	</body>
 </html>
