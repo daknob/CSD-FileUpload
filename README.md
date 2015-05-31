@@ -9,7 +9,7 @@ file hosting and are not accessible publicly.
 <h2>Installation</h2>
 Login to a Debian computer as usual and then run:
 ```
-cd public_html
+cd ~/public_html
 git clone https://github.com/DaKnOb/CSD-FileUpload.git FileUpload
 ```
 <br>
