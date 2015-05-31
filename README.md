@@ -10,8 +10,7 @@ file hosting and are not accessible publicly.
 Login to a Debian computer as usual and then run:
 ```
 cd public_html
-git clone https://github.com/DaKnOb/CSD-FileUpload.git
-mv CSD-FileUpload FileUpload
+git clone https://github.com/DaKnOb/CSD-FileUpload.git FileUpload
 ```
 <br>
 Now test if all you can access the web application at:
