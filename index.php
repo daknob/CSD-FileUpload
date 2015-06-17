@@ -14,7 +14,7 @@
 
 	if(isset($_POST['action']) && $_POST['action'] == "action"){		/* Check if the form is submitted */
 		$saveTo = "../STORAGE/" . $_FILES['filename']['name'];			/* Generate the path the file's supposed to be saved in */
-		if(hash("sha256", $_POST['pass']) == $PASSWORD){				/* Check if the password is correct */
+		if(hash("sha256", $_POST['pass']) === $PASSWORD && strcmp(hash("sha256", $_POST['pass']), $PASSWORD)===0){				/* Check if the password is correct */
 			unset($_POST['pass']);										/* Attempt to remove password from memory */
 			if(is_dir("../STORAGE") === FALSE){							/* If it's the first time this runs, do some filesystem initialization */
 				mkdir("../STORAGE");
