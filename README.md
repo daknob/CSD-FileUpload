@@ -41,7 +41,7 @@ have set a password. Learn how to do this below.
 In order to generate a password for the file uploading, run the following
 command in a CSD Computer:
 ```
-cd public_html/FileUpload;
+cd ~/public_html/FileUpload;
 ./set-password YOUR_NEW_PASSWORD
 ```
 
