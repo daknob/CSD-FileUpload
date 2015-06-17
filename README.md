@@ -41,11 +41,9 @@ have set a password. Learn how to do this below.
 In order to generate a password for the file uploading, run the following
 command in a CSD Computer:
 ```
-printf "PASSWORD_GOES_HERE" | sha256sum | cut -d" " -f1
+cd public_html/FileUpload;
+./set-password YOUR_NEW_PASSWORD
 ```
-After that, you can copy the password and replace the contents of the
-```$PASSWORD``` variable with the output of this script. Only include 
-the first You will not be able to login without performing this step.
 
 <h4>Password Reset - iForgot</h4>
 In the unfortunate event of losing your password, please follow the
