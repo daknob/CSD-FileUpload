@@ -4,8 +4,9 @@
 
 	/* Copyright (c) 2015 Antonios A. Chariton <daknob.mac@gmail.com> */
 
-	$PASSWORD = "No SHA-256 will match this phrase"; /* sha256($password); */
 	$WEBSITE  = "https://daknob.net/";	/* Website for redirects */
+
+	require("password.php");
 
 	if($_SERVER['HTTPS'] != 'on'){
 		header("Location: https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
