@@ -1,1 +1,1 @@
-<?php $PASSWORD = "No SHA-256 Hash Will Match This String"; ?>
+<?php $PASSWORD = "Please use set-password to set the current password."; ?>
