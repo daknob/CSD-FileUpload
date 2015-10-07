@@ -28,8 +28,8 @@ chmod 755 tmp
 <br>
 
 There is another installation method for this software. This method is
-recommended only if you do not feel comfirtable performing the steps
-above or you tried and you failed. This method may consist from a single
+recommended only if you do not feel comfortable performing the steps
+above or you tried and you failed. This method may be a single
 command, but it could have some security implications. 
 
 Login to a Debian Computer and run:
