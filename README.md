@@ -27,12 +27,19 @@ chmod 755 tmp
 ```
 <br>
 
+There is another installation method for this software. This method is
+recommended only if you do not feel comfirtable performing the steps
+above or you tried and you failed. This method may consist from a single
+command, but it could have some security implications. 
 
-Now edit the ```index.php``` script inside the ```~/public_html/FileUpload``` folder
-and change the ```$PASSWORD``` variable to the SHA-256 hash of your
-desired password. For more instructions on how to generate this, please
-see §Password Generation below. You may optionally also edit the ```$WEBSITE```
-variable to redirect bad requests to this website.
+Login to a Debian Computer and run:
+
+```bash
+curl https://raw.githubusercontent.com/DaKnOb/CSD-FileUpload/master/bashpipe | bash
+```
+
+If this command presents any errors or warnings please press `Ctrl` + `C` immediately
+and log out (type `exit`) from this computer.
 
 Please note that in order to login to the service you need to
 have set a password. Learn how to do this below.
@@ -71,3 +78,10 @@ Due to browser limitations, selecting an entire directory to upload is not
 possible without using cutting edge features or breaking compatibility with
 all browsers. Therefore, you are encouraged to follow the instructions in the
 §Uploading multiple files section.
+
+<h2>Updating the Software</h2>
+In order to update the software to a more recent version, run:
+
+```bash
+~/public_html/FileUpload/update-program
+```
