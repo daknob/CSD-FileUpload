@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/public_html/FileUpload
+git pull
