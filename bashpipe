@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Download the program to the correct directory
+cd ~/public_html
+git clone https://github.com/DaKnOb/CSD-FileUpload.git FileUpload
+
+# Additional steps to ensure that the program works
+cd ~/public_html
+mkdir html
+mkdir tmp
+chmod 755 html
+chmod 755 tmp
+chmod +x FileUpload/set-password
+
+# Inform user about password change
+echo "The program has been installed successfully."
+echo "You must setup a password before using it."
+echo "Run: ~/public_html/FileUpload/set-password <password>"
+echo "Example: ~/public_html/FileUpload/set-password abc123"
+echo "After setting up the password you can access the service online:"
+echo "https://www.csd.uoc.gr/~"`whoami`"/FileUpload"
